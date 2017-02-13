@@ -83,6 +83,14 @@ h2 {
 	position: relative;
 }
 
+.profile #logo {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
 .profile #avatar {
 	display: inline-block;
 	width: 80px;

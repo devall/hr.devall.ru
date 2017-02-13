@@ -6,7 +6,25 @@ archive: true
 <article class="post">
     <header>
         <h1>{{ page.title }}</h1>
-        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
+        <h2 class="headline">
+        {% assign m = page.date | date: "%-m" %}
+        {{ page.date | date: "%-d" }}
+        {% case m %}
+            {% when '1' %}Января
+            {% when '2' %}Февраля
+            {% when '3' %}Марта
+            {% when '4' %}Апреля
+            {% when '5' %}Мая
+            {% when '6' %}Июня
+            {% when '7' %}Июля
+            {% when '8' %}Августа
+            {% when '9' %}Сентября
+            {% when '10' %}Октября
+            {% when '11' %}Ноября
+            {% when '12' %}Декабря
+        {% endcase %}
+        {{ page.date | date: "%Y" }}
+        </h2>
     </header>
     <section id="post-body">
         {{content}}
@@ -29,7 +47,7 @@ archive: true
 <!-- Disqus comments -->
 {% if site.disqus %}
     <div class="archive readmore">
-        <h3>Comments</h3>
+        <h3>Комментарии</h3>
         {% include disqus.html %}
     </div>
 {% endif %}
@@ -37,7 +55,7 @@ archive: true
 <!-- Archive post list -->
 {% if page.archive %}
     <ul id="post-list" class="archive readmore">
-        <h3>Read more</h3>
+        <h3>Посмотрите еще</h3>
         {% for post in site.posts %}
             <li>
                 <a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}<aside class="dates">{{ post.date | date:"%b %d" }}</aside></a>

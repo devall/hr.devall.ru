@@ -1,9 +1,9 @@
 ---
-title: About
+title: О сайте
 permalink: about/
 profile: true
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+Мы хотим позволить людям находить друг друга: встретить задумки с творцами, работодателей с соискателями, программистов с дизайнерами и всех кто так или иначе связан с IT и горит одной целью - найти нужных людей.
 
 {% include footer.html %}
