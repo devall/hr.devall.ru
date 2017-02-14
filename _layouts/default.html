@@ -18,7 +18,6 @@
   <meta content="website" property="og:type">
   <meta content="Мы хотим позволить людям находить друг друга: встретить задумки с творцами, работодателей с соискателями, программистов с дизайнерами и всех кто так или иначе связан с IT и горит одной целью - найти нужных людей." property="og:description">
 {% endif %}
- 
 <meta content="{{ site.domain_name }}{{ page.url }}" property="og:url">
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
@@ -27,7 +26,6 @@
 {% for category in page.categories limit:1 %}
   <meta content="{{ category }}" property="article:section">
 {% endfor %}
-
 {% for tag in page.tags %}
   <meta content="{{ tag }}" property="article:tag">
 {% endfor %}
