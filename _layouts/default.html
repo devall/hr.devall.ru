@@ -10,7 +10,7 @@
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:title" content="{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}" />
   <meta property="og:url" content="{{ site.domain_name }}{% if page.url %}{{ page.url }}{% endif %}" />
-  <meta property="og:description" content="{% if post.content %}{{ post.content: truncatewords: 300 }}{% else %}Мы хотим позволить людям находить друг друга: встретить задумки с творцами, работодателей с соискателями, программистов с дизайнерами и всех кто так или иначе связан с IT и горит одной целью - найти нужных людей.{% endif %}" />
+  <meta property="og:description" content="{% if page.content %}{{ page.content: truncatewords: 300 }}{% else %}Мы хотим позволить людям находить друг друга: встретить задумки с творцами, работодателей с соискателями, программистов с дизайнерами и всех кто так или иначе связан с IT и горит одной целью - найти нужных людей.{% endif %}" />
   
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
   <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
